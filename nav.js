@@ -24,6 +24,7 @@ const showNavigation = () => {
   const languagePicker = document.querySelector(".navigation__language-picker");
   const languagePickerOverlay = document.querySelector(".navigation__overlay");
   languagePicker.addEventListener("click", (e) => {
+    e.stopPropagation();
     e.preventDefault();
     languagePickerOverlay.classList.toggle("language-picker-active");
   });
