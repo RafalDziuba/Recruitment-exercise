@@ -6,12 +6,17 @@
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-
+body {
+  overflow-x: hidden;
+  height: 200vh;
+}
 .navigation {
   width: 100%;
-  margin-top: 5.9rem;
+  padding-top: 5.9rem;
   display: flex;
   align-items: center;
+  background-color: white;
+  position: fixed;
 
   .navigation__logo {
     width: 97px;
@@ -39,18 +44,96 @@
     text-transform: uppercase;
   }
 
-  .navigation__menu {
-      width: 3.6rem;
-      height: 2.6rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-right: 2rem;
+  .navigation__burger {
+    width: 3.6rem;
+    height: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 2rem;
+    cursor: pointer;
 
-      .navigation__menu--item {
-          width: 100%;
-          height: 0.2rem;
-          background-color: black;
-      }
+    .navigation__burger--line {
+      width: 100%;
+      height: 0.2rem;
+      background-color: black;
+      transition: 0.5s ease-in-out;
+    }
   }
+
+  .navigation__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 10.38rem;
+    padding-top: 7.1rem;
+    height: calc(100vh - 100.38px);
+    width: 100%;
+    list-style: none;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+
+    .navigation__link {
+      height: 2.3rem;
+      margin-bottom: 7.2rem;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .navigation__link-text {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: black;
+      font-weight: 500;
+      line-height: 1.829rem;
+    }
+
+    .navigation__link--buy {
+      width: 15.2rem;
+      height: 5rem;
+      border-radius: 2.85rem;
+      background-color: #ffb001;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 20px 59px -10px #00000026;
+    }
+    .navigation__link-text--buy {
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@keyframes links-slide {
+  from {
+    opacity: 0;
+    transform: translateX(7rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+//for scripts
+
+.sticky-nav {
+  box-shadow: 0 4px 2px -2px gray;
+}
+
+.nav-active {
+  transform: translateX(0%) !important;
+}
+
+.burger-active .line-1 {
+    transform: rotate(-45deg) translate(-8px, 9px);
+}
+.burger-active .line-2 {
+opacity: 0;
+}
+.burger-active .line-3 {
+    transform: rotate(45deg) translate(-8px, -9px);
 }
