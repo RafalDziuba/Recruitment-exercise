@@ -11,18 +11,29 @@ const showNavigation = () => {
     navigation.classList.toggle("nav-active");
 
     links.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = "";
-        } else {
-          link.style.animation = `links-slide 0.4s ease forwards ${
-            index / 8
-          }s`;
-        }
-      });
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = `links-slide 0.4s ease forwards ${index / 8}s`;
+      }
+    });
 
-      burger.classList.toggle('burger-active');
+    burger.classList.toggle("burger-active");
   });
 
+  const languagePicker = document.querySelector(".navigation__language-picker");
+  const languagePickerOverlay = document.querySelector(".navigation__overlay");
+  languagePicker.addEventListener("click", (e) => {
+    e.preventDefault();
+    languagePickerOverlay.classList.toggle("language-picker-active");
+  });
+
+  languagePicker.addEventListener("keypress", (e) => {
+    e.preventDefault();
+    if (e.key === "Enter") {
+      languagePickerOverlay.classList.toggle("language-picker-active");
+    }
+  });
 };
 
 showNavigation();
