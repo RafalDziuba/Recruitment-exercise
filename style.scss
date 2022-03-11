@@ -1,3 +1,9 @@
+$mainOrange: #ffb001;
+$mainBlack: #212121;
+$grayForm: #C2C2C2;
+$grayBackground: #FAFAFD;
+$white: #FFFFFF;
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +22,7 @@ body {
   padding-top: 5.9rem;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: $white;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -55,7 +61,7 @@ body {
     cursor: pointer;
 
     .navigation__overlay {
-      background-color: #fff;
+      background-color: $white;
       position: absolute;
       top: 0;
       left: 0;
@@ -89,7 +95,7 @@ body {
 
           text-transform: uppercase;
           text-decoration: none;
-          color: black;
+          color: $mainBlack;
         }
       }
     }
@@ -113,13 +119,13 @@ body {
     .navigation__burger--line {
       width: 100%;
       height: 0.2rem;
-      background-color: black;
+      background-color: $mainBlack;
       transition: 0.5s ease-in-out;
     }
   }
 
   .navigation__links {
-    background-color: #fff;
+    background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +148,7 @@ body {
     .navigation__link-text {
       text-decoration: none;
       font-size: 1.5rem;
-      color: black;
+      color: $mainBlack;
       font-weight: 500;
       line-height: 1.829rem;
       margin-right: 0.1rem;
@@ -152,7 +158,7 @@ body {
       width: 15.2rem;
       height: 5rem;
       border-radius: 2.85rem;
-      background-color: #ffb001;
+      background-color: $mainOrange;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -225,7 +231,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffb001;
+  background-color: $mainOrange;
   width: 100%;
   height: 31.3rem;
   border-radius: 1rem;
@@ -273,7 +279,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fafafd;
+    background-color: $grayBackground;
     border-radius: 1.5rem;
     margin-bottom: 2rem;
 
@@ -315,7 +321,7 @@ body {
     line-height: 1.95rem;
     text-align: center;
     font-weight: 900;
-    color: white;
+    color: $white;
     font-size: 1.6rem;
     margin-top: 4rem;
   }
@@ -327,13 +333,13 @@ body {
     max-width: 20rem;
     height: 2.8rem;
     line-height: 3.2rem;
-    color: white;
+    color: $white;
     opacity: 0.5;
     text-align: center;
   }
 
   .calculator__input:focus{
-    outline-color: #ffb001;
+    outline-color: $mainOrange;
   }
  
 }
@@ -368,21 +374,21 @@ body {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: #ffb001;
+    background-color: $mainOrange;
     width: 32rem;
     height: 8rem;
     border: none;
     border-radius: 4.75rem;
     overflow: hidden;
     box-shadow: 0px 34px 64px -10px #00000026;
-    color: black;
+    color: $mainBlack;
     font-size: 2rem;
     line-height: 2.4rem;
     text-decoration: none;
     cursor: pointer;
 
     .footer__button {
-      color: black;
+      color: $mainBlack;
       text-decoration: none;
       font-size: 2.4rem;
     }
@@ -397,7 +403,7 @@ body {
     @include footer-items;
     width: 29.3rem;
     height: 7.5rem;
-    color: #212121;
+    color: $mainBlack;
     font-size: 2rem;
     font-weight: 900;
     line-height: 2.438rem;
@@ -449,9 +455,14 @@ body {
       height: 2rem;
       line-height: 1.95rem;
       .navigation__desktop-content {
-        color: black;
+        color: $mainBlack;
         text-decoration: none;
         font-size: 1.6rem;
+        transition: color 0.1s;
+      }
+
+      .navigation__desktop-content:hover {
+        color: $mainOrange;
       }
     }
 
@@ -467,11 +478,11 @@ body {
       width: 15.2rem;
       height: 5.7rem;
       margin-right: 11rem;
-      background-color: #ffb001;
-      border: 2px solid #ffb001;
+      background-color: $mainOrange;
+      border: 2px solid $mainOrange;
       box-shadow: 0px 20px 59px -10px #00000026;
       text-decoration: none;
-      color: black;
+      color: $mainBlack;
       text-transform: uppercase;
       font-size: 1.6rem;
       font-weight: 900;

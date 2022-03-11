@@ -211,6 +211,7 @@
           <label class="calculator__label" for="glass-boxes"
             >Ile pojemników na szkło zapełniasz miesięcznie?</label
           ><input
+          oninput="validity.valid||(value='')"
             class="calculator__input"
             min="1"
             max="999"
@@ -225,6 +226,7 @@
           <label class="calculator__label" for="glass-export"
             >Ile płacisz za wywóz jednego pojemnika na szkło?</label
           ><input
+          oninput="validity.valid||(value='')"
             class="calculator__input"
             min="1"
             max="9999"
