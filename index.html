@@ -12,7 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <nav class="navigation">
@@ -107,10 +108,18 @@
         </svg>
       </div>
       <ul class="navigation__menu">
-        <li class="navigation__desktop-links"><a class="navigation__desktop-content" href="#">Policz zyski</a></li>
-        <li class="navigation__desktop-links"><a class="navigation__desktop-content" href="#">O produkcie</a></li>
-        <li class="navigation__desktop-links"><a class="navigation__desktop-content" href="#">Kontakt</a></li>
-        <li class="navigation__desktop-links navigation__desktop-links--last"><a class="navigation__desktop-content" href="#">FAQ</a></li>
+        <li class="navigation__desktop-links">
+          <a class="navigation__desktop-content" href="#">Policz zyski</a>
+        </li>
+        <li class="navigation__desktop-links">
+          <a class="navigation__desktop-content" href="#">O produkcie</a>
+        </li>
+        <li class="navigation__desktop-links">
+          <a class="navigation__desktop-content" href="#">Kontakt</a>
+        </li>
+        <li class="navigation__desktop-links navigation__desktop-links--last">
+          <a class="navigation__desktop-content" href="#">FAQ</a>
+        </li>
       </ul>
       <div tabindex="0" class="navigation__language-picker">
         <p class="navigation__language-info">pl</p>
@@ -165,7 +174,7 @@
       <h1 class="header__title">
         Inteligentna kruszarka, która zamienia szkło w piasek.
       </h1>
-      <div  class="header__image">
+      <div class="header__image">
         <div class="header__shop">
           <a href=""
             ><svg
@@ -185,7 +194,7 @@
       </div>
     </header>
     <section class="baner">
-      <h2  class="baner__title">
+      <h2 class="baner__title">
         Płać 5 razy mniej za wywóz odpadów szklanych.
       </h2>
       <p class="baner__info">
@@ -195,10 +204,10 @@
     </section>
 
     <section class="calculator">
-      <h2  class="calculator__title">Ile zaoszczędzisz?</h2>
+      <h2 class="calculator__title">Ile zaoszczędzisz?</h2>
       <p class="calculator__info">Rachunek jest prosty</p>
       <div class="calculator__container">
-        <div  class="calculator__card">
+        <div class="calculator__card card1">
           <label class="calculator__label" for="glass-boxes"
             >Ile pojemników na szkło zapełniasz miesięcznie?</label
           ><input
@@ -212,7 +221,7 @@
             placeholder="20"
           />
         </div>
-        <div  class="calculator__card">
+        <div class="calculator__card card2">
           <label class="calculator__label" for="glass-export"
             >Ile płacisz za wywóz jednego pojemnika na szkło?</label
           ><input
@@ -227,7 +236,7 @@
           />
         </div>
       </div>
-      <div  class="calculator__card calculator__card--black">
+      <div class="calculator__card calculator__card--black card3">
         <p class="calculator__text">Dzięki kruszarce zaoszczędzisz</p>
         <span class="calculator__result">900 zł</span>
         <p class="calculator__text">rocznie.</p>
@@ -235,10 +244,18 @@
     </section>
     <footer class="footer">
       <p class="footer__text">To na co wydasz zaoszczędzoną gotówkę?</p>
-      <div class="footer__shop"><a href="#" class="footer__button"><span class="footer__button footer__button--buy">Kup</span> 8499 zł</a></div>
-      <h2 class="footer__title">Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!</h2>
+      <div class="footer__shop">
+        <a href="#" class="footer__button"
+          ><span class="footer__button footer__button--buy">Kup</span> 8499
+          zł</a
+        >
+      </div>
+      <h2 class="footer__title">
+        Brzmi dobrze? Uważaj. Dopiero się rozkręcamy!
+      </h2>
     </footer>
     <script src="nav.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="calc.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>
