@@ -39,9 +39,16 @@ ScrollReveal().reveal(".card2", {
   delay: 300,
   opacity: 0,
   duration: 800,
-  distance: "10rem",
-  origin: "right",
+  distance: "15rem",
+  origin: "left",
 });
+// ScrollReveal().reveal(".card2", {
+//   delay: 300,
+//   opacity: 0,
+//   duration: 800,
+//   distance: "10rem",
+//   origin: "right",
+// });
 ScrollReveal().reveal(".card3", {
   delay: 300,
   opacity: 0,
